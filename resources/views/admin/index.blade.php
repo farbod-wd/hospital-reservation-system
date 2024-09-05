@@ -158,25 +158,3 @@
     </main>
 @endsection
 
-@section('scripts')
-    <script>
-        function SearchTurn(event) {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content,
-                    'Content-Type': 'application/json'
-                }
-            })
-            $.ajax({
-                type: 'GET',
-                url: '/',
-                data: JSON.stringify({
-                    id: id,
-                }),
-                success: function(res) {
-                    location.reload();
-                }
-            });
-        }
-    </script>
-@endsection
