@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+#toggler {
+    position: relative;
+    left: 12px;
+    bottom: 33px;
+    cursor: pointer;
+}
+
+
+.form-label {
+    font-weight: bold;
+}
+
+/* Make the image to responsive */
+.image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: red;
+  }
+  
+  
+
+
+
+
+input::placeholder,
+input {
+    text-align: center;
+}
+
+
+.form {
+    height: 140px;
+    background-color: white;
+}
+
+.form h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+}
+
+nav .breadcrumb {
+    padding: 0;
+    background: transparent;
+}
+
+.breadcrumb .breadcrumb-item a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18px;
+    font-size: 13px;
+    color: #999 !important;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item {
+    position: relative;
+    margin: 0 15px 0 0;
+    background: #575763;
+    min-width: 100px;
+    height: 16px;
+}
+
+.breadcrumb-item:before {
+    content: "" !important;
+    position: absolute;
+    width: 0;
+    border-top: 16px solid #575763;
+    border-left: 10px solid transparent;
+    left: -10px;
+    top: 0;
+    height: 16px;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    background: #26a1c6;
+}
+
+.breadcrumb-item.active a
+{
+    color:#26a1c6 !important;
+}
+
+
+
+
