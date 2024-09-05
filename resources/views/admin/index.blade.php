@@ -25,19 +25,21 @@
                                     <!-- [ Main Content ] start -->
                                     <div class="d-flex">
                                         <div class="col-md-6 col-lg-6 ms-auto mb-3">
-                                            <a href="{{route('doctors.index')}}" class="text-primary text-decoration-none">
-                                            مشاهده متخصصین
-                                                    <i class="fa fa-search-plus"></i>
+                                            <a href="{{ route('doctors.index') }}"
+                                                class="text-primary text-decoration-none">
+                                                مشاهده متخصصین
+                                                <i class="fa fa-search-plus"></i>
                                             </a>
                                             <img src="{{ url('panel/assets/media/image/doctors.jpg') }}" alt=""
                                                 width="300">
 
                                         </div>
                                         <div class="col-xl-5 col-md-6 me-auto mb-3">
-                                            <a href="{{route('paitients.index')}}" class="text-primary text-decoration-none">
+                                            <a href="{{ route('paitients.index') }}"
+                                                class="text-primary text-decoration-none">
                                                 مشاهده بیماران
-                                                        <i class="fa fa-search-plus"></i>
-                                                </a>
+                                                <i class="fa fa-search-plus"></i>
+                                            </a>
                                             <img src="{{ url('panel/assets/media/image/patients.jpg') }}" alt=""
                                                 width="300">
                                         </div>
@@ -101,50 +103,51 @@
                                             </div>
                                         </div>
                                         <!-- sessions-section end -->
-                                        <div class="col-md-6 col-xl-4">
-                                            <div class="card user-card">
-                                                <div class="card-header">
-                                                    <h5 class="text-center">Profile</h5>
-                                                </div>
-                                                <div class="card-body text-center">
-                                                    <div class="usre-image">
-                                                        <img src="{{ asset('panel/assets/media/image/avatar.jpg') }}"
-                                                            class="img-radius wid-100 m-auto" alt="User-Profile-Image">
+                                        @hasrole('Web Developer')
+                                            <div class="col-md-6 col-xl-4">
+                                                <div class="card user-card">
+                                                    <div class="card-header">
+                                                        <h5 class="text-center">Profile</h5>
                                                     </div>
                                                     @foreach ($users as $user)
-                                                        @if ($user->is_admin)
-                                                            <h6 class="f-w-600 m-t-25 m-b-10">{{ $user->name }}</h6>
-                                                            <p class="m-t-15">{{ $user->email }}</p>
-                                                            <div class="bg-primary counter-block m-t-10 p-20">
-                                                                <div class="row">
-                                                                    <div class="col-4">
-                                                                        <h6 class="text-info mt-2 mb-0">username
-                                                                            {{ $user->username }}</h6>
-                                                                    </div>
-                                                                    <div class="col-4">
-                                                                        <h6 class="text-info mt-2 mb-0">شماره تماس
-                                                                            {{ $user->phone }}</h6>
-                                                                    </div>
-                                                                    <div class="col-4">
-                                                                        <h6 class="text-text-light mt-2 mb-0">Github</h6>
-                                                                        <a href="">
-                                                                            <i
-                                                                                class="fa fa-github text-info fs-5 Github "></i>
-                                                                        </a>
-                                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <div class="usre-image">
+                                                            <img src="{{ asset('panel/assets/media/image/avatar.jpg') }}"
+                                                                class="img-radius wid-100 m-auto" alt="User-Profile-Image">
+                                                        </div>
+                                                        <h6 class="f-w-600 m-t-25 m-b-10">{{ $user->name }}</h6>
+                                                        <p class="m-t-15">{{ $user->email }}</p>
+                                                        <div class="bg-primary counter-block m-t-10 p-20">
+                                                            <div class="row">
+                                                                <div class="col-4">
+                                                                    <h6 class="text-info mt-2 mb-0">username
+                                                                        {{ $user->username }}</h6>
                                                                 </div>
+                                                                <div class="col-4">
+                                                                    <h6 class="text-info mt-2 mb-0">شماره تماس
+                                                                        {{ $user->phone }}</h6>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <h6 class="text-text-light mt-2 mb-0">Github</h6>
+                                                                    <a href="">
+                                                                        <i class="fa fa-github text-info fs-5 Github "></i>
+                                                                    </a>
+                                                                </div>
+
                                                             </div>
+                                                        </div>
                                                         @endif
-                                                    @endforeach
+                                                        @endforeach
 
-                                                    <hr>
-                                                    @foreach ($roles as $role)
-                                                        <p class="text-black fw-bold"> {{ $role->name }}</p>
-                                                    @endforeach
+                                                        <hr>
+                                                        @foreach ($roles as $role)
+                                                            <p class="text-black fw-bold"> {{ $role->name }}</p>
+                                                        @endforeach
 
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endhasrole
                                     </div>
                                 </div>
 
@@ -157,4 +160,3 @@
         </div>
     </main>
 @endsection
-
