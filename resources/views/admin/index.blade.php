@@ -103,7 +103,7 @@
                                             </div>
                                         </div>
                                         <!-- sessions-section end -->
-                                        @hasrole('Web Developer')
+                                        {{-- @hasrole('Web Developer') --}}
                                             <div class="col-md-6 col-xl-4">
                                                 <div class="card user-card">
                                                     <div class="card-header">
@@ -136,9 +136,7 @@
 
                                                             </div>
                                                         </div>
-                                                        @endif
                                                         @endforeach
-
                                                         <hr>
                                                         @foreach ($roles as $role)
                                                             <p class="text-black fw-bold"> {{ $role->name }}</p>
