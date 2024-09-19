@@ -103,7 +103,7 @@
                                             </div>
                                         </div>
                                         <!-- sessions-section end -->
-                                        {{-- @hasrole('Web Developer') --}}
+                                        @hasrole('Web Developer')
                                             <div class="col-md-6 col-xl-4">
                                                 <div class="card user-card">
                                                     <div class="card-header">

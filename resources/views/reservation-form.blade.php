@@ -2,14 +2,14 @@
 @section('content')
     <div class="container form col-lg-7 rounded-4">
         <h3 class="py-3 text-center">رزرو نوبت بیمار</h3>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center my-4">
-                    <li class="breadcrumb-item active"><a href="/">ثبت اطلاعات بیمار</a></li>
-                    <li class="breadcrumb-item"><a href="#">تایید شماره همراه</a></li>
-                    <li class="breadcrumb-item"><a href="#">رزرو نوبت</a></li>
-                </ol>
-            </nav>
-            @if (Illuminate\Support\Facades\Session::has('message'))
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center my-4">
+                <li class="breadcrumb-item active"><a href="/">ثبت اطلاعات بیمار</a></li>
+                <li class="breadcrumb-item"><a href="#">تایید شماره همراه</a></li>
+                <li class="breadcrumb-item"><a href="#">رزرو نوبت</a></li>
+            </ol>
+        </nav>
+        @if (Illuminate\Support\Facades\Session::has('message'))
             <div class="alert alert-info">
                 <div>{{ session('message') }}</div>
             </div>
@@ -41,8 +41,8 @@
             </div>
             <div class="mb-3 d-none" id="sickness">
                 <label for="sickness" class="form-label">نوع بیماری</label>
-                <input type="text" class="form-control" name="type-sick">
-                <div id="precident" class="form-text text-danger">این فیلد برای 50 سال به بالا الزامی است</div>
+                <input type="text" class="form-control" name="type_sick" id="type_sick" onkeypress="sickDisplay()">
+                <div id="precident" class="form-text text-danger" >این فیلد برای 50 سال به بالا الزامی است</div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-4">
@@ -81,6 +81,24 @@
         </form>
 
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function sickDisplay(){
+            const precident = document.getElementById('precident');
+            const type_sick = document.getElementById('type_sick');
+    
+            if (type_sick == "") {
+                document.getElementById('precident').classList.add('text-danger')
+            }
+    
+            else
+            {
+                 document.getElementById('precident').style.display = "none"
+            }
+        }
+    </script>
 @endsection
 @section('date')
     <script>

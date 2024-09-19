@@ -31,7 +31,7 @@
 			const name = document.getElementById('name').value;
 	
 			if (name != "") {
-				document.getElementById('Name').classList.remove('text-danger')
+				document.getElementById('Name').style.display="none";
 			}
       else
       {
@@ -43,12 +43,12 @@
 			const doctor_name = document.getElementById('dname').value;
 	
 			if (age != "") {
-				document.getElementById('patient_age').classList.remove('text-danger')
+				document.getElementById('patient_age').style.display="none";
 			}
 
       else if(doctor_name != "")
       {
-        document.getElementById('dName').classList.remove('text-danger')
+        document.getElementById('dName').style.display="none"
       }
 
       else
