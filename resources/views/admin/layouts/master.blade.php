@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> پنل ادمین نوبت دهی </title>
-    <link rel="shortcut icon" href="assets/media/image/favicon.png">
+    <link rel="icon" href="{{url('panel/assets/media/image/reservation.png')}}">
     <meta name="theme-color" content="#5867dd">
     @livewireStyles
     <link rel="stylesheet" href="{{ url('panel/vendors/bundle.css') }}" type="text/css">
