@@ -13,7 +13,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Middleware\IsAdmin;
 
 
-Route::prefix('/admin')->middleware(IsAdmin::class)->group(function(){
+Route::prefix('/admin')->middleware('auth',IsAdmin::class)->group(function(){
     Route::get('/' ,[AdminController::class , 'index']);
     Route::resource('/users' , UserController::class);
     Route::resource('/roles' ,RoleController::class);
