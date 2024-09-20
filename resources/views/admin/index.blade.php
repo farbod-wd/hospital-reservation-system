@@ -98,6 +98,9 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
+                                                        <div class="text-start ms-3">
+                                                            <a href="{{route('turns.index')}}" target="_blank" class="text-primary">مشاهده تمامی نوبت ها >></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -110,51 +113,52 @@
                                                         <h5 class="text-center">Profile</h5>
                                                     </div>
                                                     @foreach ($users as $user)
-                                                    <div class="card-body text-center">
-                                                        <div class="usre-image">
-                                                            <img src="{{ asset('panel/assets/media/image/avatar.jpg') }}"
-                                                                class="img-radius wid-100 m-auto" alt="User-Profile-Image">
-                                                        </div>
-                                                        <h6 class="f-w-600 m-t-25 m-b-10">{{ $user->name }}</h6>
-                                                        <p class="m-t-15">{{ $user->email }}</p>
-                                                        <div class="bg-primary counter-block m-t-10 p-20">
-                                                            <div class="row">
-                                                                <div class="col-4">
-                                                                    <h6 class="text-light mt-2 mb-0">username
-                                                                        {{ $user->username }}</h6>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    <h6 class="text-light mt-2 mb-0">شماره تماس
-                                                                        {{ $user->phone }}</h6>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    <h6 class="text-light mt-2 mb-0">Github</h6>
-                                                                    <a href="https://github.com/farbod-wd" target="_blank" rel="follow">
-                                                                        <i class="fa fa-github text-info fs-5 Github "></i>
-                                                                    </a>
-                                                                </div>
-
+                                                        <div class="card-body text-center">
+                                                            <div class="usre-image">
+                                                                <img src="{{ asset('panel/assets/media/image/avatar.jpg') }}"
+                                                                    class="img-radius wid-100 m-auto" alt="User-Profile-Image">
                                                             </div>
-                                                        </div>
-                                                        @endforeach
-                                                        <hr>
-                                                        @foreach ($roles as $role)
-                                                            <p class="text-black fw-bold"> {{ $role->name }}</p>
-                                                        @endforeach
+                                                            <h6 class="f-w-600 m-t-25 m-b-10">{{ $user->name }}</h6>
+                                                            <p class="m-t-15">{{ $user->email }}</p>
+                                                            <div class="bg-primary counter-block m-t-10 p-20">
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <h6 class="text-light mt-2 mb-0">username
+                                                                            {{ $user->username }}</h6>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <h6 class="text-light mt-2 mb-0">شماره تماس
+                                                                            {{ $user->phone }}</h6>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <h6 class="text-light mt-2 mb-0">Github</h6>
+                                                                        <a href="https://github.com/farbod-wd" target="_blank"
+                                                                            rel="follow">
+                                                                            <i class="fa fa-github text-info fs-5 Github "></i>
+                                                                        </a>
+                                                                    </div>
 
-                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    @endforeach
+                                                    <hr>
+                                                    @foreach ($roles as $role)
+                                                        <p class="text-black fw-bold"> {{ $role->name }}</p>
+                                                    @endforeach
+
                                                 </div>
                                             </div>
-                                        @endhasrole
-                                    </div>
+                                        </div>
+                                    @endhasrole
                                 </div>
-
-                                <!-- [ Main Content ] end -->
                             </div>
+
+                            <!-- [ Main Content ] end -->
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 @endsection
