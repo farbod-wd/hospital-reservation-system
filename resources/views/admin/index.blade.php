@@ -92,7 +92,7 @@
                                                                             <td>{{ $turn->patient_name }}</td>
                                                                             <td>{{ $turn->doctor_name }}</td>
                                                                             <td>{{ $turn->patient_age }}</td>
-                                                                            <td>{{ $turn->date }}</td>
+                                                                            <td>{{ verta($turn->date)->format('%B %d، %Y') }}</td>
                                                                         </tr>
                                                                     @endforeach
                                                                 </tbody>

@@ -43,7 +43,7 @@
 
                            @default
                        @endswitch
-                        <td class="text-center align-middle">{{$turn->date}}</td>
+                        <td class="text-center align-middle">{{ verta($turn->date)->format('%B %d، %Y') }}</td>
                         <td class="text-center align-middle">
                             <a class="btn btn-outline-info" href="{{route('turns.edit' , $turn->id)}}">
                                 ویرایش
