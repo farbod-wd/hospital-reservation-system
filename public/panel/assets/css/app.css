@@ -11519,3 +11519,9 @@ body.dark .ui-datepicker select {
 {
 color: white !important;
 }
+
+
+.table-card
+{
+	height: 647px;
+}

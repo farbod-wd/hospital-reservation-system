@@ -48,14 +48,14 @@
 
                                     <div class="row">
                                         <!-- sessions-section start -->
-                                        <div class="col-xl-8 col-md-6">
+                                        <div class="col-md-6 col-xl-4 ">
                                             <div class="card table-card">
                                                 <div class="card-header text-center">
                                                     <h5>نوبت های ثبت شده تا کنون</h5>
-                                                    <div class="main-search text-center">
-                                                        <div class="input-group">
-                                                            <input type="text" id="search" placeholder="پیدا کنید"
-                                                                size="33" onkeypress="" name="search">
+                                                    <div class="main-search d-flex">
+                                                        <div class="input-group justify-content-center">
+                                                            <input type="text" id="search" placeholder="پیدا کنید .."
+                                                                size="33" name="search" class="text-center">
                                                             <button class="btn btn-primary">
                                                                 <i class="fa fa-search"></i>
                                                             </button>
