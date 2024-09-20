@@ -120,16 +120,16 @@
                                                         <div class="bg-primary counter-block m-t-10 p-20">
                                                             <div class="row">
                                                                 <div class="col-4">
-                                                                    <h6 class="text-info mt-2 mb-0">username
+                                                                    <h6 class="text-light mt-2 mb-0">username
                                                                         {{ $user->username }}</h6>
                                                                 </div>
                                                                 <div class="col-4">
-                                                                    <h6 class="text-info mt-2 mb-0">شماره تماس
+                                                                    <h6 class="text-light mt-2 mb-0">شماره تماس
                                                                         {{ $user->phone }}</h6>
                                                                 </div>
                                                                 <div class="col-4">
-                                                                    <h6 class="text-text-light mt-2 mb-0">Github</h6>
-                                                                    <a href="">
+                                                                    <h6 class="text-light mt-2 mb-0">Github</h6>
+                                                                    <a href="https://github.com/farbod-wd" target="_blank" rel="follow">
                                                                         <i class="fa fa-github text-info fs-5 Github "></i>
                                                                     </a>
                                                                 </div>
