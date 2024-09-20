@@ -23,7 +23,7 @@ class IndexController extends Controller
             'patient_age'=>$request->input('patient_age'),
             'is_precedent'=>$request->input('is_precedent') === 'on',
             'type_sick'=>$request->input('type_sick'),
-            'date'=>($request->input('created_at') !==null ? Verta::parse($request->input('date'))->format('%B %d، %Y')->datetime() : now()),
+           'date'=>($request->input('date') !==null ? Verta::parse($request->input('date'))->datetime() : now()),
         ]);
 
         return redirect('/sms')->with('message' , 'نوبت گرفته شد');

@@ -73,7 +73,7 @@ class TurnController extends Controller
             'doctor_name'=>$request->input('doctor_name'),
             'patient_age'=>$request->input('patient_age'),
             'is_precedent'=>$request->input('is_precedent') === 'on',
-            'date'=>($request->input('date')!==null ? Helper::shamsi_to_miladi($request->input('date')) : now()),
+            'date'=>($request->input('date') !==null ? Verta::parse($request->input('date'))->datetime() : now()),
         ]);
 
         return redirect(route('turns.index'))->with('message' , 'نوبت ویرایش شد');
